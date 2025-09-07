@@ -1,6 +1,4 @@
 streamlit
-flask
-requests
 pandas
 numpy
 matplotlib
@@ -9,4 +7,3 @@ scikit-learn
 tqdm
 gensim
 nltk
-openai
