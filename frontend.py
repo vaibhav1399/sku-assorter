@@ -5,6 +5,7 @@ import io
 import matplotlib.pyplot as plt
 from logic import *
 import time
+import nltk
 
 # Page setup
 st.set_page_config(page_title="Product Assortment Pro", page_icon="📦", layout="wide")
@@ -280,4 +281,5 @@ if st.session_state.get("data_ready"):
     st.markdown("#### 🤖 Channel Result")
     st.dataframe(st.session_state.channel_result_df.head(10))
     csv_channel = st.session_state.channel_result_df.to_csv(index=False).encode('utf-8')
+
     st.download_button("⬇️ Download Channel Result", csv_channel, "channel_result.csv", "text/csv")
