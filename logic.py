@@ -21,6 +21,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
+nltk.download('punkt', quiet=True)
 
 
 def classify_items(file_path):
@@ -786,4 +787,5 @@ def channel_wise_assortment(df, config):
 #     return final_labels_df1, remaining_df1 
 
 # import ollama # type: ignore
+
 # print("✅ Using Ollama from:", ollama.__file__)
