@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from logic import *
 import time
 import nltk
+from logic import classify_items, generate_item_vectors
 
 # Page setup
 st.set_page_config(page_title="Product Assortment Pro", page_icon="📦", layout="wide")
@@ -95,6 +96,7 @@ with st.sidebar:
     if st.button("🚀 Set Threshold", disabled=submit_disabled):
         with st.spinner("Processing..."):
             try:
+                nltk.download('punkt', quiet=True)
                 start_time = time.time()
                 t0 = time.time()
 
@@ -283,3 +285,4 @@ if st.session_state.get("data_ready"):
     csv_channel = st.session_state.channel_result_df.to_csv(index=False).encode('utf-8')
 
     st.download_button("⬇️ Download Channel Result", csv_channel, "channel_result.csv", "text/csv")
+
