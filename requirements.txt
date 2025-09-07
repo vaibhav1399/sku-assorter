@@ -1,0 +1,12 @@
+streamlit
+flask
+requests
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+tqdm
+gensim
+nltk
+openai
